@@ -33,6 +33,7 @@ public class AnimalDisplayFragment extends Fragment {
     RadioButton pink;
 
 
+    // For tracking selected image
     int selectedAnimal = -1;
 
 
