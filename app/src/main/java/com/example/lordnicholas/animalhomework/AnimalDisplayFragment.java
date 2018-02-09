@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by kachi on 1/31/18.
@@ -57,6 +58,10 @@ public class AnimalDisplayFragment extends Fragment {
         red = view.findViewById(R.id.red);
         blue = view.findViewById(R.id.blue);
 
+        //references for the color
+
+
+
 
 
         return view;
@@ -70,15 +75,24 @@ public class AnimalDisplayFragment extends Fragment {
         birdImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectedAnimal = 1;
+                if(birdText.getVisibility()==View.VISIBLE){
+                    selectedAnimal = -1;
+                }else{
+                    selectedAnimal = 1;
+                }
                 updateTextStatus();
             }
+            //setting the default
         });
 
         dogImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectedAnimal = 2;
+                if(dogText.getVisibility()==View.VISIBLE){
+                    selectedAnimal = -1;
+                }else{
+                    selectedAnimal = 2;
+                }
                 updateTextStatus();
             }
         });
@@ -86,7 +100,11 @@ public class AnimalDisplayFragment extends Fragment {
         catImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectedAnimal = 3;
+                if(catText.getVisibility()==View.VISIBLE){
+                    selectedAnimal = -1;
+                }else{
+                    selectedAnimal = 3;
+                }
                 updateTextStatus();
             }
         });
@@ -128,7 +146,11 @@ public class AnimalDisplayFragment extends Fragment {
     }
 
     private void updateImageColorStatus(int color) {
-        if(selectedAnimal == 1){
+
+        if (selectedAnimal == -1) {
+            Toast.makeText(getActivity(),"Please select a Animal",Toast.LENGTH_SHORT).show();
+            //toasts message
+        }else if(selectedAnimal == 1){
             birdImage.setColorFilter(color, PorterDuff.Mode.SRC_IN);
         }else  if(selectedAnimal == 2){
             dogImage.setColorFilter(color, PorterDuff.Mode.SRC_IN);
@@ -146,12 +168,14 @@ public class AnimalDisplayFragment extends Fragment {
             dogText.setVisibility(View.GONE);
             catText.setVisibility(View.GONE);
 
+            //selection of animal
+
         }else if (selectedAnimal == 2){
 
             dogText.setVisibility(View.VISIBLE);
             birdText.setVisibility(View.GONE);
             catText.setVisibility(View.GONE);
-
+//selection of animal
 
 
 
@@ -161,6 +185,10 @@ public class AnimalDisplayFragment extends Fragment {
             birdText.setVisibility(View.GONE);
             catText.setVisibility(View.VISIBLE);
 
+        }else{
+            dogText.setVisibility(View.GONE);
+            birdText.setVisibility(View.GONE);
+            catText.setVisibility(View.GONE);
         }
 
 
