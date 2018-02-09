@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3"
+            android:orientation="vertical"
+            android:layout_above="@+id/colorpicker">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/birdImage"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/bird"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/birdText"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:text="@string/Birds"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_height="match_parent" />
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/dogImage"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/dog"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/dogText"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:text="@string/dogs"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"></TextView>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/cat.Image"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/cat"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/catText"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:text="@string/cats"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"></TextView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <RadioGroup
+            android:id="@+id/colorpicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/red"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/red"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/orange"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/orange"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/green"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/green"
+                android:button="@null"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/blue"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/blue"
+                android:button="@null"/>
+
+
+            <RadioButton
+                android:id="@+id/pink"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:button="@null"
+                android:layout_margin="18dp"
+                android:background="@color/pink"/>
+
+        </RadioGroup>
+
+
+</RelativeLayout>
